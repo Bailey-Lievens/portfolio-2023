@@ -1,0 +1,439 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/Bold/OpenSans-Bold.woff2") format("woff2"), url("/assets/fonts/openSans/Bold/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/BoldItalic/OpenSans-BoldItalic.woff2") format("woff2"), url("/assets/fonts/openSans/BoldItalic/OpenSans-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/ExtraBold/OpenSans-ExtraBold.woff2") format("woff2"), url("/assets/fonts/openSans/ExtraBold/OpenSans-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff2") format("woff2"), url("/assets/fonts/openSans/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/Italic/OpenSans-Italic.woff2") format("woff2"), url("/assets/fonts/openSans/Italic/OpenSans-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/Light/OpenSans-Light.woff2") format("woff2"), url("/assets/fonts/openSans/Light/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/LightItalic/OpenSans-LightItalic.woff2") format("woff2"), url("/assets/fonts/openSans/LightItalic/OpenSans-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/Regular/OpenSans-Regular.woff2") format("woff2"), url("/assets/fonts/openSans/Regular/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/Semibold/OpenSans-Semibold.woff2") format("woff2"), url("/assets/fonts/openSans/Semibold/OpenSans-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/fonts/openSans/SemiboldItalic/OpenSans-SemiboldItalic.woff2") format("woff2"), url("/assets/fonts/openSans/SemiboldItalic/OpenSans-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Pixel Operator";
+  src: url("/assets/fonts/pixelOperator/Regular/pixeloperator-webfont.woff2") format("woff2"), url("/assets/fonts/pixelOperator/Regular/pixeloperator-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+* a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  color: #000;
+  cursor: url("/assets/images/cursors/default.png"), auto !important;
+}
+
+a {
+  cursor: url("/assets/images/cursors/link.png"), auto !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFF;
+}
+
+@media only screen and (min-width: 1500px) {
+  header {
+    height: 70px;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+}
+header nav a {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  header nav a {
+    font-size: 1.7rem;
+  }
+}
+header nav a:hover {
+  animation: link-hover 0.4s linear infinite;
+}
+header .marquee {
+  background-color: #000;
+  padding: 0.3333333333rem 0;
+  overflow-x: hidden;
+}
+header .marquee .marquee-text {
+  color: #FFF;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  animation: marquee-hover 5460s linear infinite;
+}
+
+@keyframes link-hover {
+  0% {
+    color: rgb(253, 213, 36);
+  }
+  25% {
+    color: rgb(46, 190, 247);
+  }
+  50% {
+    color: rgb(32, 255, 43);
+  }
+  75% {
+    color: rgb(255, 85, 184);
+  }
+  100% {
+    color: rgb(215, 242, 255);
+  }
+}
+@keyframes marquee-hover {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .index-page main {
+    display: grid;
+    grid-template-areas: "social social social social news" "social social social social news" "social social social social news" "gif gif links links news" "gif gif monologue monologue monologue" "gif gif monologue monologue monologue";
+    grid-template-rows: 1fr 1fr 1fr 1fr auto 2fr;
+    grid-template-columns: 1fr 1fr 2fr 2fr 2fr;
+    height: calc(100vh - 70px);
+  }
+}
+.index-page main .section-social {
+  grid-area: social;
+  background-color: #fff846;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1500px) {
+  .index-page main .section-social {
+    height: 100%;
+  }
+}
+.index-page main .section-social .social-sidebar {
+  background-color: #000;
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+@media only screen and (max-height: 750px) {
+  .index-page main .section-social .social-sidebar {
+    flex-direction: column-reverse;
+  }
+}
+.index-page main .section-social .social-sidebar .shapes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (max-height: 750px) {
+  .index-page main .section-social .social-sidebar .shapes-container {
+    display: none;
+  }
+}
+.index-page main .section-social .social-sidebar .shapes-container div {
+  background-color: #FFF;
+  width: 18px;
+  height: 18px;
+}
+.index-page main .section-social .social-sidebar .shapes-container .square:hover {
+  background-color: #00ffc2;
+}
+.index-page main .section-social .social-sidebar .shapes-container .circle {
+  border-radius: 50%;
+  width: 21.6px;
+  height: 21.6px;
+}
+.index-page main .section-social .social-sidebar .shapes-container .circle:hover {
+  background-color: #fff846;
+}
+.index-page main .section-social .social-sidebar .shapes-container .triangle {
+  width: 0;
+  height: 0;
+  background-color: unset;
+  border-right: 12.6px solid transparent;
+  border-left: 12.6px solid transparent;
+  border-bottom: 21.6px solid #FFF;
+}
+.index-page main .section-social .social-sidebar .shapes-container .triangle:hover {
+  border-bottom: 21.6px solid #7AFF6E;
+}
+.index-page main .section-social .social-sidebar .socials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.index-page main .section-social .social-sidebar .socials-container a img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(262deg) brightness(104%) contrast(103%);
+  width: 24px;
+  height: 24px;
+}
+.index-page main .section-social .social-sidebar .socials-container a .spotify:hover {
+  filter: invert(41%) sepia(62%) saturate(4237%) hue-rotate(336deg) brightness(111%) contrast(106%);
+}
+.index-page main .section-social .social-sidebar .socials-container a .github:hover {
+  filter: invert(95%) sepia(96%) saturate(1946%) hue-rotate(84deg) brightness(99%) contrast(105%);
+}
+.index-page main .section-social .social-sidebar .socials-container a .instagram:hover {
+  filter: invert(83%) sepia(97%) saturate(392%) hue-rotate(339deg) brightness(105%) contrast(104%);
+}
+.index-page main .section-social .social-sidebar .socials-container a .linkedin:hover {
+  filter: invert(99%) sepia(100%) saturate(1047%) hue-rotate(47deg) brightness(95%) contrast(113%);
+}
+.index-page main .section-social .overflow-background-text {
+  margin-top: -20px;
+}
+.index-page main .section-social .overflow-background-text div {
+  white-space: nowrap;
+}
+.index-page main .section-social .overflow-background-text div:nth-child(even) {
+  margin-left: -115px;
+}
+.index-page main .section-social .overflow-background-text .main-bold-text {
+  color: #dfd700;
+  font-size: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.index-page main .section-gif {
+  grid-area: gif;
+  background-color: #7AFF6E;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+@media only screen and (min-width: 600px) {
+  .index-page main .section-gif {
+    max-height: 600px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .index-page main .section-gif {
+    max-height: unset;
+    height: 100%;
+    aspect-ratio: unset;
+  }
+}
+.index-page main .section-gif .background-image {
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.index-page main .section-gif .gif {
+  z-index: 2;
+  width: 60%;
+  height: auto;
+}
+@media only screen and (min-width: 600px) {
+  .index-page main .section-gif .gif {
+    width: auto;
+    max-height: 500px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .index-page main .section-gif .gif {
+    width: 60%;
+    max-height: unset;
+  }
+}
+.index-page main .section-gif .credit {
+  font-size: 0.6666666667rem;
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.index-page main .section-gif .credit a {
+  text-decoration: underline;
+}
+.index-page main .section-news {
+  grid-area: news;
+  background-color: #00ffc2;
+  padding: 2rem 4rem;
+}
+.index-page main .section-news * {
+  color: #FFF;
+}
+.index-page main .section-news .news-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.index-page main .section-news .news-container .news-item-wrapper {
+  margin-bottom: 1rem;
+}
+.index-page main .section-news .news-container .news-item-wrapper a {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  left: 0;
+  transition: left 0.05s linear;
+}
+.index-page main .section-news .news-container .news-item-wrapper a .square {
+  width: 11px;
+  height: 11px;
+  background-color: #FFF;
+  margin-right: 1rem;
+  position: relative;
+  top: 2px;
+}
+.index-page main .section-news .news-container .news-item-wrapper a:hover {
+  left: 5px;
+}
+.index-page main .section-news .news-container .news-item-wrapper .tags-container {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.index-page main .section-news .news-container .news-item-wrapper .tags-container .tag {
+  background-color: #FFF;
+  border-radius: 2px;
+  color: #009974;
+  font-size: 0.8333333333rem;
+  padding: 0.3333333333rem 0.5555555556rem;
+}
+.index-page main .section-links {
+  grid-area: links;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.index-page main .section-links a {
+  border: solid 5px transparent;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+}
+.index-page main .section-links a:hover {
+  border: solid 5px #000;
+}
+.index-page main .section-links .divider {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.index-page main .section-monologue {
+  grid-area: monologue;
+  background-color: #000;
+  padding: 0.3rem;
+  height: 100%;
+}
+.index-page main .section-monologue p {
+  color: #FFF;
+  font-weight: 100;
+  font-size: 0.7142857143rem;
+  text-align: justify;
+}
+.index-page main .section-monologue a {
+  color: #FFF;
+  text-decoration: underline;
+  font-weight: 100;
+  font-size: 0.7142857143rem;
+  text-align: justify;
+}
+
+.main-bold-text {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.pixel-text {
+  font-family: "Pixel Operator", sans-serif;
+}/*# sourceMappingURL=style.css.map */

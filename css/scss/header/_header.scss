@@ -1,0 +1,71 @@
+header {
+    @media only screen and (min-width: 1500px) {
+        height: 70px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+        padding: calc($defaultPadding / 4) calc($defaultPadding / 2);
+
+        a {
+            font-size: $mainFontSize;
+
+            @media only screen and (min-width: 600px) {
+                font-size: calc($mainFontSize * 1.7);
+            }
+
+            &:hover {
+                animation: link-hover .4s linear infinite;
+            }
+        }
+    }
+
+    .marquee {
+        background-color: $black;
+        padding: calc($defaultPadding / 3) 0;
+        overflow-x: hidden;
+
+        .marquee-text {
+            color: $white;
+            white-space: nowrap;
+
+            width: fit-content;
+
+            animation: marquee-hover 5460s linear infinite; // This is the length of the movie
+        }
+    }
+}
+
+@keyframes link-hover {
+    0% {
+        color: rgb(253, 213, 36);
+    }
+
+    25% {
+        color: rgb(46, 190, 247);
+    }
+
+    50% {
+        color: rgb(32, 255, 43);
+    }
+
+    75% {
+        color: rgb(255, 85, 184);
+    }
+
+    100% {
+        color: rgb(215, 242, 255);
+    }
+}
+
+@keyframes marquee-hover {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

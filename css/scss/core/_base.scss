@@ -1,0 +1,37 @@
+* {
+    color: $black;
+    font-family: $mainFont;
+    box-sizing: border-box; // Why is this not the default.
+    margin-top: 0;
+    margin-bottom: 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    color: $black;
+
+    cursor: url('/assets/images/cursors/default.png'), auto !important;
+}
+
+a {
+    cursor: url('/assets/images/cursors/link.png'), auto !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $white; 
+}
+
