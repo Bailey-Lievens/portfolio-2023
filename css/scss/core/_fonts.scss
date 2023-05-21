@@ -1,5 +1,5 @@
 // Open Sans
-$openSansPath: "/assets/fonts/openSans";
+$openSansPath: "./../../../assets/fonts/openSans";
 
 // I have never been this fancy before, making a function just to be ✨dynamic✨
 @mixin openSansFontDef($OpenSansPath, $FontType:"Regular") {
@@ -80,8 +80,8 @@ $openSansPath: "/assets/fonts/openSans";
 // Pixel Operator
 @font-face {
     font-family: 'Pixel Operator';
-    src:  url('/assets/fonts/pixelOperator/Regular/pixeloperator-webfont.woff2') format('woff2'),
-          url('/assets/fonts/pixelOperator/Regular/pixeloperator-webfont.woff') format('woff');
+    src:  url('./../../../assets/fonts/pixelOperator/Regular/pixeloperator-webfont.woff2') format('woff2'),
+          url('./../../../assets/fonts/pixelOperator/Regular/pixeloperator-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
