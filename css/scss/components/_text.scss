@@ -9,3 +9,7 @@
     font-smooth: never;
     -webkit-font-smoothing : none;
 }
+
+.smaller-bold-text {
+    font-size: calc($mainFontSize * 1.3) !important;
+}

@@ -510,6 +510,8 @@ header .marquee .marquee-text {
   gap: 2rem;
   height: 100%;
   background-color: #000;
+  width: 20%;
+  max-width: 250px;
 }
 @media only screen and (min-width: 1000px) {
   .list-main .desktop-page-nav {
@@ -520,7 +522,9 @@ header .marquee .marquee-text {
   background-color: #fff846;
   color: #aca500;
   text-align: center;
-  padding: 1rem;
+  padding: 0 1rem;
+  line-height: 75px;
+  height: 75px;
 }
 .list-main .desktop-page-nav nav {
   display: flex;
@@ -573,6 +577,10 @@ header .marquee .marquee-text {
   font-family: "Pixel Operator", sans-serif;
   font-smooth: never;
   -webkit-font-smoothing: none;
+}
+
+.smaller-bold-text {
+  font-size: 1.3rem !important;
 }
 
 .hover-cursor {

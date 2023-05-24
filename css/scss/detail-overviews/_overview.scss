@@ -105,6 +105,8 @@
         gap: calc($defaultMargin * 2);
         height: 100%;
         background-color: $black;
+        width: 20%;
+        max-width: 250px;
 
         @media only screen and (min-width: 1000px) {
             display: flex;
@@ -114,7 +116,9 @@
             background-color: $yellow;
             color: darken($yellow, 30%);
             text-align: center;
-            padding: $defaultPadding;
+            padding: 0 $defaultPadding;
+            line-height: 75px;
+            height: 75px;
         }
 
         nav {
