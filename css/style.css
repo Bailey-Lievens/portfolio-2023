@@ -427,10 +427,17 @@ header .marquee .marquee-text {
   text-align: justify;
 }
 
+.list-header {
+  position: fixed;
+  background-color: #FFF;
+}
+
 .list-main .mobile-page-nav {
   background-color: #fff846;
   text-align: center;
   padding: 0.5rem 0;
+  position: fixed;
+  width: 100vw;
 }
 @media only screen and (min-width: 1000px) {
   .list-main .mobile-page-nav {
@@ -567,6 +574,17 @@ header .marquee .marquee-text {
     transform: rotate(360deg) scale(14);
   }
 }
+.list-main {
+  display: grid;
+  height: 100%;
+}
+.list-main .item-overview-container {
+  background-color: red;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-bold-text {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;

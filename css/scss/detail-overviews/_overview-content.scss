@@ -1,0 +1,12 @@
+.list-main {
+    display: grid;
+    height: 100%;
+
+    .item-overview-container {
+        background-color: red;
+        height: 50px;
+        
+        display: flex;
+        flex-direction: column;
+    }
+}
