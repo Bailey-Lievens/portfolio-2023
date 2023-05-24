@@ -6,4 +6,6 @@
 
 .pixel-text {
     font-family: $pixelFont;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
 }

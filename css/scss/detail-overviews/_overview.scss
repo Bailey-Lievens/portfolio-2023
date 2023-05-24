@@ -1,0 +1,168 @@
+.list-main {
+    .mobile-page-nav {
+        @media only screen and (min-width: 1000px) {
+            display: none;
+        }
+
+        background-color: $yellow;
+        text-align: center;
+        padding: .5rem 0;
+
+        h1 {
+            color: darken($yellow, 30%);
+        }
+
+        .menu-toggle {
+            position: fixed;
+            bottom: $defaultMargin;
+            left: $defaultMargin;
+            background-color: $black;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            padding: 2rem;
+
+            height: 50px;
+            width: 50px;
+
+            transition: .15s;
+
+            a {
+                color: white;
+            }
+
+            &:hover {
+                border-radius: 0;
+            }
+        }
+
+        nav {
+            display: none;
+        }
+
+        .menu-close-text {
+            display: none;
+        }
+
+        .menu-open {
+            border-radius: 0;
+            animation: menuOpen .7s ease forwards;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .menu-toggle-text {
+                animation: itemDissapear 1.5s linear forwards;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                animation: itemDissapear 1s linear reverse;
+
+                .current-navigation {
+                    font-style: italic;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .menu-close-text {
+                display: block;
+
+                border: solid $white 1px;
+                padding: $defaultPadding;
+                width: 50%;
+                min-width: fit-content;
+
+                transition: .2s;
+
+                &:hover {
+                    width: 100%;
+
+                    color: darken($yellow, 30%);
+                    border: solid darken($yellow, 30%) 1px;
+                    background-color: $yellow;
+                }
+            }
+        }
+    }
+
+    .desktop-page-nav {
+        display: none;
+
+        position: fixed;
+        flex-direction: column;
+        gap: calc($defaultMargin * 2);
+        height: 100%;
+        background-color: $black;
+
+        @media only screen and (min-width: 1000px) {
+            display: flex;
+        }
+
+        h1 {
+            background-color: $yellow;
+            color: darken($yellow, 30%);
+            text-align: center;
+            padding: $defaultPadding;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                width: 70%;
+                color: $white;
+                font-size: calc($mainFontSize * 1.4);
+                padding: $defaultPadding;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@keyframes menuOpen {
+    0% {
+        bottom: $defaultMargin;
+        left: $defaultMargin;
+    }
+
+    50% {
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    100% {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes itemDissapear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(360deg) scale(14);
+    }
+}

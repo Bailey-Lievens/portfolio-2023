@@ -5,8 +5,12 @@
     margin-top: 0;
     margin-bottom: 0;
 
+    cursor: url('./../../../assets/images/cursors/default.png'), auto !important;
+
+
     a {
         text-decoration: none;
+        cursor: url('./../../../assets/images/cursors/link.png'), auto !important;
     }
 }
 
@@ -16,11 +20,6 @@ body {
     background-color: $white;
     color: $black;
 
-    cursor: url('./../../../assets/images/cursors/default.png'), auto !important;
-}
-
-a {
-    cursor: url('./../../../assets/images/cursors/link.png'), auto !important;
 }
 
 ::-webkit-scrollbar {

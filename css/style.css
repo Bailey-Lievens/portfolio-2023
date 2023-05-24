@@ -70,9 +70,11 @@
   box-sizing: border-box;
   margin-top: 0;
   margin-bottom: 0;
+  cursor: url("./../../../assets/images/cursors/default.png"), auto !important;
 }
 * a {
   text-decoration: none;
+  cursor: url("./../../../assets/images/cursors/link.png"), auto !important;
 }
 
 body {
@@ -80,11 +82,6 @@ body {
   padding: 0;
   background-color: #FFF;
   color: #000;
-  cursor: url("./../../../assets/images/cursors/default.png"), auto !important;
-}
-
-a {
-  cursor: url("./../../../assets/images/cursors/link.png"), auto !important;
 }
 
 ::-webkit-scrollbar {
@@ -100,10 +97,11 @@ a {
 }
 
 @media only screen and (min-width: 1500px) {
-  header {
+  .index-page header {
     height: 70px;
   }
 }
+
 header nav {
   display: flex;
   justify-content: space-between;
@@ -411,7 +409,8 @@ header .marquee .marquee-text {
 .index-page main .section-monologue {
   grid-area: monologue;
   background-color: #000;
-  padding: 0.3rem;
+  padding: 1rem;
+  overflow: scroll;
   height: 100%;
 }
 .index-page main .section-monologue p {
@@ -428,6 +427,142 @@ header .marquee .marquee-text {
   text-align: justify;
 }
 
+.list-main .mobile-page-nav {
+  background-color: #fff846;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+@media only screen and (min-width: 1000px) {
+  .list-main .mobile-page-nav {
+    display: none;
+  }
+}
+.list-main .mobile-page-nav h1 {
+  color: #aca500;
+}
+.list-main .mobile-page-nav .menu-toggle {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 2rem;
+  height: 50px;
+  width: 50px;
+  transition: 0.15s;
+}
+.list-main .mobile-page-nav .menu-toggle a {
+  color: white;
+}
+.list-main .mobile-page-nav .menu-toggle:hover {
+  border-radius: 0;
+}
+.list-main .mobile-page-nav nav {
+  display: none;
+}
+.list-main .mobile-page-nav .menu-close-text {
+  display: none;
+}
+.list-main .mobile-page-nav .menu-open {
+  border-radius: 0;
+  animation: menuOpen 0.7s ease forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list-main .mobile-page-nav .menu-open .menu-toggle-text {
+  animation: itemDissapear 1.5s linear forwards;
+}
+.list-main .mobile-page-nav .menu-open nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: itemDissapear 1s linear reverse;
+}
+.list-main .mobile-page-nav .menu-open nav .current-navigation {
+  font-style: italic;
+}
+.list-main .mobile-page-nav .menu-open nav a:hover {
+  text-decoration: underline;
+}
+.list-main .mobile-page-nav .menu-open .menu-close-text {
+  display: block;
+  border: solid #FFF 1px;
+  padding: 1rem;
+  width: 50%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  transition: 0.2s;
+}
+.list-main .mobile-page-nav .menu-open .menu-close-text:hover {
+  width: 100%;
+  color: #aca500;
+  border: solid #aca500 1px;
+  background-color: #fff846;
+}
+.list-main .desktop-page-nav {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  background-color: #000;
+}
+@media only screen and (min-width: 1000px) {
+  .list-main .desktop-page-nav {
+    display: flex;
+  }
+}
+.list-main .desktop-page-nav h1 {
+  background-color: #fff846;
+  color: #aca500;
+  text-align: center;
+  padding: 1rem;
+}
+.list-main .desktop-page-nav nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-main .desktop-page-nav nav a {
+  width: 70%;
+  color: #FFF;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+.list-main .desktop-page-nav nav a:hover {
+  text-decoration: underline;
+}
+
+@keyframes menuOpen {
+  0% {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  50% {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes itemDissapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg) scale(14);
+  }
+}
 .main-bold-text {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -436,4 +571,10 @@ header .marquee .marquee-text {
 
 .pixel-text {
   font-family: "Pixel Operator", sans-serif;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+.hover-cursor {
+  cursor: url("./../../../assets/images/cursors/link.png"), auto !important;
 }/*# sourceMappingURL=style.css.map */

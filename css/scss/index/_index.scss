@@ -328,7 +328,9 @@
             grid-area: monologue;
 
             background-color: $black;
-            padding: .3rem;
+            padding: 1rem;
+
+            overflow: scroll;
 
             height: 100%;
             p {
